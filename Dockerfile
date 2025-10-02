@@ -41,4 +41,4 @@ COPY . .
 EXPOSE 8000
 
 # Default command to run your scraper
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
