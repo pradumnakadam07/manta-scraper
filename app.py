@@ -22,10 +22,11 @@ if st.button("Start Scraping"):
     st.info("Launching Chrome... Please wait and solve CAPTCHA if shown.")
 
     options = uc.ChromeOptions()
-    options.add_argument("--headless=new")   # headless mode for server
+    options.binary_location = "/usr/bin/chromium"  # <-- path inside container
+    options.add_argument("--headless")  # optional for headless scraping
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-blink-features=AutomationControlled")
+
     driver = uc.Chrome(options=options)
 
 
