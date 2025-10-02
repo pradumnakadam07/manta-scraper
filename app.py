@@ -27,7 +27,8 @@ if st.button("Start Scraping"):
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    driver = uc.Chrome(options=options)
+    driver = uc.Chrome(options=options, version_main=140)
+
 
 
     start_url = f"https://www.manta.com/search?search_source=business&search={urllib.parse.quote(search_query)}&city={city}&state={state}"
